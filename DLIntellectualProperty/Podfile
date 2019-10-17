@@ -11,7 +11,7 @@ target 'DLIntellectualProperty' do
   pod 'Masonry', '1.1'
   pod 'AFNetworking', '3.2.1'
   pod 'SDWebImage', '5.2'
-  pod 'FSPagerView', '0.8.3'
+  #pod 'FSPagerView', '0.8.3'
   pod 'TYAttributedLabel', '2.6.2'
   pod 'MJRefresh', '3.2'
   pod 'YYKit', '1.0'

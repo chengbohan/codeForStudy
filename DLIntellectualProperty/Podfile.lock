@@ -14,7 +14,6 @@ PODS:
   - AFNetworking/Serialization (3.2.1)
   - AFNetworking/UIKit (3.2.1):
     - AFNetworking/NSURLSession
-  - FSPagerView (0.8.3)
   - IQKeyboardManager (6.5.0)
   - Masonry (1.1.0)
   - MJRefresh (3.2.0)
@@ -31,7 +30,6 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (= 3.2.1)
-  - FSPagerView (= 0.8.3)
   - IQKeyboardManager (= 6.5)
   - Masonry (= 1.1)
   - MJRefresh (= 3.2)
@@ -43,7 +41,6 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AFNetworking
-    - FSPagerView
     - IQKeyboardManager
     - Masonry
     - MJRefresh
@@ -54,7 +51,6 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  FSPagerView: 670405b2f18e2a87fa37f20b00de783e562c25a8
   IQKeyboardManager: 700e5155d6a292383b54e8678aec769e14fc78fc
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJRefresh: ed450d6eb9d3346a2cb033ab7eb6de090aeef437
@@ -63,6 +59,6 @@ SPEC CHECKSUMS:
   VTMagic: b49e5f456dbcbfd9a3588ba92417233a105bc193
   YYKit: 51b6002d44554f574c8bd614981e58b1e65c1b0f
 
-PODFILE CHECKSUM: 03a734becfe1b28316ef3f2867b6d06373e584ee
+PODFILE CHECKSUM: 25ce3fb67ecfb6195f806231fc6e9fa7f0324d6b
 
 COCOAPODS: 1.7.5
