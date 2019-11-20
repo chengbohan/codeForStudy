@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="64" id="KGk-i7-Jjw" customClass="QuestionResultCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7mY-Sa-RTA" userLabel="上一页">
+                        <rect key="frame" x="72" y="10" width="82" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="I1B-Ih-6Un"/>
+                            <constraint firstAttribute="width" constant="82" id="tEb-av-qeF"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="lastView">
+                            <color key="titleColor" red="0.8980392157" green="0.8980392157" blue="0.8980392157" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3JL-68-h7u" userLabel="下一页">
+                        <rect key="frame" x="166" y="10" width="82" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="82" id="GTL-f0-tB8"/>
+                            <constraint firstAttribute="height" constant="40" id="Hgz-C4-sTb"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="commitView"/>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="7mY-Sa-RTA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7EP-bg-8DS"/>
+                    <constraint firstItem="7mY-Sa-RTA" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="-6" id="HqW-QR-NeD"/>
+                    <constraint firstItem="3JL-68-h7u" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="TCa-2f-7Mb"/>
+                    <constraint firstAttribute="bottom" secondItem="7mY-Sa-RTA" secondAttribute="bottom" constant="10" id="lNo-vE-yfG"/>
+                    <constraint firstAttribute="bottom" secondItem="3JL-68-h7u" secondAttribute="bottom" constant="10" id="mY1-72-sJK"/>
+                    <constraint firstItem="3JL-68-h7u" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="centerX" constant="6" id="zlv-fT-COV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="btnA" destination="7mY-Sa-RTA" id="pct-84-63U"/>
+                <outlet property="btnB" destination="3JL-68-h7u" id="2S4-ct-3A7"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="89.0625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="commitView" width="74" height="37"/>
+        <image name="lastView" width="74" height="37"/>
+    </resources>
+</document>

@@ -7,7 +7,10 @@
 //
 
 #import "AppDelegate.h"
-
+#import "DLTabBarVC.h"
+#import "ViewController.h"
+#import "DLLoginVC.h"
+#import "DLMessageVC.h"
 @interface AppDelegate ()
 
 @end
@@ -16,8 +19,27 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
+    //[IQKeyboardManager sharedManager].enableAutoToolbar = NO;
+    
     // Override point for customization after application launch.
-    [NSThread sleepForTimeInterval:2];
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    DLTabBarVC *tabbar = [DLTabBarVC new];
+    [tabbar addChildVC:@"DLHomeVC" title:@"首页" normalImg:@"FirstN" selectImg:@"FirstS"];
+    [tabbar addChildVC:@"DLMessageVC" title:@"消息" normalImg:@"SecN" selectImg:@"SecS"];
+    [tabbar addChildVC:@"DLMineVC" title:@"我的" normalImg:@"ThirdN" selectImg:@"ThirdS"];
+    self.window.rootViewController = tabbar;
+    
+    
+    ViewController *vc = [ViewController new];
+    //self.window.rootViewController = vc;
+    
+    DLLoginVC *loginVC = [[DLLoginVC alloc] initWithNibName:@"DLLoginVC" bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:loginVC];
+    //self.window.rootViewController = nav;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

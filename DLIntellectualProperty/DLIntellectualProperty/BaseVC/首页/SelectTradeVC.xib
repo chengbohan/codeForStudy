@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectTradeVC">
+            <connections>
+                <outlet property="selectBg" destination="1tt-c9-lIL" id="0oy-ZY-gqc"/>
+                <outlet property="selectLab" destination="Ffv-Wt-atR" id="NfG-xw-5RR"/>
+                <outlet property="table1" destination="5Kt-Sw-KVh" id="8cy-XB-g63"/>
+                <outlet property="table2" destination="esA-3z-sJW" id="efu-a1-WMd"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1tt-c9-lIL">
+                    <rect key="frame" x="0.0" y="44" width="414" height="49"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已选(0/3)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffv-Wt-atR">
+                            <rect key="frame" x="15" y="7" width="45" height="11"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="11" id="EHO-8l-syG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Ffv-Wt-atR" firstAttribute="top" secondItem="1tt-c9-lIL" secondAttribute="top" constant="7" id="fQa-3y-9Yu"/>
+                        <constraint firstAttribute="height" constant="49" id="jax-Fj-mle"/>
+                        <constraint firstItem="Ffv-Wt-atR" firstAttribute="leading" secondItem="1tt-c9-lIL" secondAttribute="leading" constant="15" id="ojx-DB-3gn"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Kt-Sw-KVh">
+                    <rect key="frame" x="0.0" y="93" width="148" height="769"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="148" id="sNS-PJ-Aun"/>
+                    </constraints>
+                </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="esA-3z-sJW">
+                    <rect key="frame" x="148" y="93" width="266" height="769"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="5Kt-Sw-KVh" secondAttribute="bottom" id="4bb-mb-P7p"/>
+                <constraint firstItem="esA-3z-sJW" firstAttribute="top" secondItem="1tt-c9-lIL" secondAttribute="bottom" id="8xE-G0-77r"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="1tt-c9-lIL" secondAttribute="trailing" id="DO7-iF-wue"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="esA-3z-sJW" secondAttribute="trailing" id="Dt3-zD-V0d"/>
+                <constraint firstItem="5Kt-Sw-KVh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Rpr-nB-gx1"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="esA-3z-sJW" secondAttribute="bottom" id="VBk-46-45f"/>
+                <constraint firstItem="1tt-c9-lIL" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="mZj-DQ-tXP"/>
+                <constraint firstItem="esA-3z-sJW" firstAttribute="leading" secondItem="5Kt-Sw-KVh" secondAttribute="trailing" id="mb4-Ap-D22"/>
+                <constraint firstItem="5Kt-Sw-KVh" firstAttribute="top" secondItem="1tt-c9-lIL" secondAttribute="bottom" id="ple-Im-L7f"/>
+                <constraint firstItem="1tt-c9-lIL" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="trZ-PR-twk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="0.0" y="50"/>
+        </view>
+    </objects>
+</document>

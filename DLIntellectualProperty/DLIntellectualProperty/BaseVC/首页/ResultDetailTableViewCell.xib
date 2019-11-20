@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="147" id="KGk-i7-Jjw" customClass="ResultDetailTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公司规模" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU3-3A-RvF">
+                        <rect key="frame" x="23" y="17" width="62" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Dov-6G-kDH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" name="title1"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="当前企业规模已经达到申请科技小巨人培育企业，但当前企业拥有的自主知识产权还未满足申请条件，建议在线联系知政达服务管家，解决问题！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Med-W5-0S3">
+                        <rect key="frame" x="54" y="51" width="251" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="bf9-0c-CED"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" name="title666666"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JN1-he-1ft">
+                        <rect key="frame" x="0.0" y="146" width="320" height="1"/>
+                        <color key="backgroundColor" name="lineColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="jEf-LW-zD4"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="Med-W5-0S3" secondAttribute="trailing" constant="15" id="IWv-HV-CTJ"/>
+                    <constraint firstItem="QU3-3A-RvF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="17" id="Kku-kv-UXE"/>
+                    <constraint firstAttribute="trailing" secondItem="JN1-he-1ft" secondAttribute="trailing" id="RhL-Xi-JAu"/>
+                    <constraint firstAttribute="bottom" secondItem="Med-W5-0S3" secondAttribute="bottom" constant="21" id="S4g-5Y-3uF"/>
+                    <constraint firstAttribute="bottom" secondItem="JN1-he-1ft" secondAttribute="bottom" id="h9v-PJ-wUV"/>
+                    <constraint firstItem="JN1-he-1ft" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="sZi-kC-JMN"/>
+                    <constraint firstItem="QU3-3A-RvF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="23" id="teG-C4-RVN"/>
+                    <constraint firstItem="Med-W5-0S3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="54" id="uem-LN-obd"/>
+                    <constraint firstItem="Med-W5-0S3" firstAttribute="top" secondItem="QU3-3A-RvF" secondAttribute="bottom" constant="19" id="zWQ-tY-0be"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="content" destination="Med-W5-0S3" id="gcN-4C-UW5"/>
+                <outlet property="title" destination="QU3-3A-RvF" id="OJ7-H4-JjK"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="163.72767857142856"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="lineColor">
+            <color red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="title1">
+            <color red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="title666666">
+            <color red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

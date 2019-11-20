@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DLContactUsVC">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="辽宁灯笼知识产权服务有限公司" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVc-b6-8es">
+                    <rect key="frame" x="45" y="82" width="243" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="q4Q-jY-1BV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话：400-109-4688" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ml3-6A-LeE">
+                    <rect key="frame" x="45" y="119" width="141" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="tmx-Cs-3Sl"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网址：www.denglong0052.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3R3-CC-DXf">
+                    <rect key="frame" x="45" y="149" width="217" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="L9U-A0-zcf"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地址：辽宁省沈阳市浑南新区五三街道金凯路6-9号4门" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIy-QI-AXh">
+                    <rect key="frame" x="45" y="179" width="324" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="0vf-bG-N3a"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="codeImg1" translatesAutoresizingMaskIntoConstraints="NO" id="2XV-n1-ziN">
+                    <rect key="frame" x="99" y="252" width="88" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="4iQ-jZ-eb8"/>
+                        <constraint firstAttribute="width" constant="88" id="leY-Q0-Hfb"/>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="codeImg2" translatesAutoresizingMaskIntoConstraints="NO" id="Q01-ls-4no">
+                    <rect key="frame" x="227" y="252" width="88" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="68i-cf-lcA"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="VwO-gd-pPR"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="iAZ-W4-Byx"/>
+                        <constraint firstAttribute="width" constant="88" id="xw8-7x-bv2"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q01-ls-4no" firstAttribute="top" secondItem="wIy-QI-AXh" secondAttribute="bottom" constant="37" id="6OR-dJ-fxk"/>
+                <constraint firstItem="3R3-CC-DXf" firstAttribute="top" secondItem="ml3-6A-LeE" secondAttribute="bottom" constant="15" id="6qm-yG-pLO"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="wIy-QI-AXh" secondAttribute="trailing" constant="45" id="GfT-eq-a2P"/>
+                <constraint firstItem="jVc-b6-8es" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="38" id="Npe-TY-zTz"/>
+                <constraint firstItem="Q01-ls-4no" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="64" id="PbR-UW-xgj"/>
+                <constraint firstItem="jVc-b6-8es" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="45" id="QLC-9E-TYi"/>
+                <constraint firstItem="2XV-n1-ziN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-64" id="WlI-8V-Urd"/>
+                <constraint firstItem="3R3-CC-DXf" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="45" id="dws-Mg-Rwc"/>
+                <constraint firstItem="wIy-QI-AXh" firstAttribute="top" secondItem="3R3-CC-DXf" secondAttribute="bottom" constant="15" id="gES-wS-Vs8"/>
+                <constraint firstItem="ml3-6A-LeE" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="45" id="nC9-CC-IL4"/>
+                <constraint firstItem="wIy-QI-AXh" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="45" id="qhe-d0-ST2"/>
+                <constraint firstItem="2XV-n1-ziN" firstAttribute="top" secondItem="wIy-QI-AXh" secondAttribute="bottom" constant="37" id="sEl-k1-sGe"/>
+                <constraint firstItem="ml3-6A-LeE" firstAttribute="top" secondItem="jVc-b6-8es" secondAttribute="bottom" constant="20" id="sTD-I7-Mee"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="137.68115942028987" y="83.705357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="codeImg1" width="80" height="80"/>
+        <image name="codeImg2" width="80" height="80"/>
+    </resources>
+</document>

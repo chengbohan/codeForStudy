@@ -8,7 +8,51 @@
 
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
+//BASE
+#define DLScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define DLScreenHeight ([UIScreen mainScreen].bounds.size.height)
+#define WeakSelf(type)    __weak typeof(type) weak##type = type;
+//
+#define DLImage(img) [UIImage imageNamed:img]
+#define DLStringIsEmpty(str) ([str isKindOfClass:[NSNull class]] || str == nil || [str length] < 1 ? YES : NO )
+#define DLArrayIsEmpty(array) (array == nil || [array isKindOfClass:[NSNull class]] || array.count == 0)
+#define DLDictIsEmpty(dic) (dic == nil || [dic isKindOfClass:[NSNull class]] || dic.allKeys == 0)
+#define DLRGB(r, g, b)             [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:1.0]
+#define DLRGBA(r, g, b, a)             [UIColor colorWithRed:((r) / 255.0) green:((g) / 255.0) blue:((b) / 255.0) alpha:((a)/1.0)]
+#define DLRGBHex(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
+
+#ifdef DEBUG// 开发阶段打印log
+#define NSSLog(FORMAT, ...) fprintf(stderr,"%s:%d\t%s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
+#else// 发布阶段 不打印log
+#define NSSLog(...)
+
+#endif
+
+
+//HEADER
+#import "DLBaseVC.h"
+#import "DLTabBarVC.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
+#import "DLIntellectualProperty-Bridging-Header.h"
+#import <SDWebImage/SDWebImage.h>
+#define MAS_SHORTHAND
+#define MAS_SHORTHAND_GLOBALS
+#import <Masonry/Masonry.h>
+#import "DLTableView.h"
+#import "DLTableViewCell.h"
+
+//Common
+#import "UILabel+Category.h"
+#import "UIButton+Category.h"
+#import "NSString+Category.h"
+#import "UIImageView+Category.h"
+#import "UIView+Category.h"
+#import "DLCommonUtil.h"
+#import "DLBottomLineField.h"
+#import "TYAttributedLabel.h"
+#import "TTTAttributedLabel.h"
+#import "YYKit.h"
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

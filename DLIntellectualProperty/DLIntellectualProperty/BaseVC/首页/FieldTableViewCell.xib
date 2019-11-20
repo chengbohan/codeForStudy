@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="FieldTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="478" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="478" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WR8-FO-I7Q">
+                        <rect key="frame" x="19" y="16" width="7.5" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="Y2J-TQ-DNS"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.36862745099999999" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="公司名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBG-jc-bA7">
+                        <rect key="frame" x="26.5" y="16" width="70" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="sGl-Hm-5M7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请填写公司名称" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNI-dV-1ky">
+                        <rect key="frame" x="338.5" y="17" width="107.5" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="Tf1-s9-o1B"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mineCellArrow" translatesAutoresizingMaskIntoConstraints="NO" id="Rm4-LW-2UQ">
+                        <rect key="frame" x="454" y="19" width="7" height="11"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="11" id="aU0-OV-ZDh"/>
+                            <constraint firstAttribute="width" constant="7" id="m1S-lC-Evw"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dlS-Zh-a6e">
+                        <rect key="frame" x="0.0" y="48" width="478" height="1"/>
+                        <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="63L-5n-VKf"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OBG-jc-bA7" firstAttribute="leading" secondItem="WR8-FO-I7Q" secondAttribute="trailing" id="6dW-fg-TlB"/>
+                    <constraint firstItem="Rm4-LW-2UQ" firstAttribute="leading" secondItem="DNI-dV-1ky" secondAttribute="trailing" constant="8" id="AYs-6v-niR"/>
+                    <constraint firstAttribute="bottom" secondItem="WR8-FO-I7Q" secondAttribute="bottom" constant="16" id="LoJ-mY-Fjd"/>
+                    <constraint firstAttribute="trailing" secondItem="Rm4-LW-2UQ" secondAttribute="trailing" constant="17" id="Pfq-UF-hWJ"/>
+                    <constraint firstItem="WR8-FO-I7Q" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="19" id="Qra-q0-ESj"/>
+                    <constraint firstItem="DNI-dV-1ky" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="RB6-05-hzS"/>
+                    <constraint firstItem="dlS-Zh-a6e" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aq5-3q-9Kr"/>
+                    <constraint firstItem="WR8-FO-I7Q" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="aqG-7m-vKq"/>
+                    <constraint firstItem="OBG-jc-bA7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="b60-GY-gzN"/>
+                    <constraint firstItem="OBG-jc-bA7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="d7V-LI-63A"/>
+                    <constraint firstItem="OBG-jc-bA7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="fxN-UR-OgL"/>
+                    <constraint firstAttribute="bottom" secondItem="OBG-jc-bA7" secondAttribute="bottom" constant="16" id="k8Y-Qh-RHf"/>
+                    <constraint firstItem="Rm4-LW-2UQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="mx9-ED-m7z"/>
+                    <constraint firstItem="OBG-jc-bA7" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="nAr-Kc-VZ0"/>
+                    <constraint firstAttribute="bottom" secondItem="dlS-Zh-a6e" secondAttribute="bottom" id="srL-Gh-vYL"/>
+                    <constraint firstAttribute="trailing" secondItem="dlS-Zh-a6e" secondAttribute="trailing" id="wCE-Xx-pzU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="contentLab" destination="DNI-dV-1ky" id="tJZ-fu-4qM"/>
+                <outlet property="starLab" destination="WR8-FO-I7Q" id="fkb-wn-Vtd"/>
+                <outlet property="titleLab" destination="OBG-jc-bA7" id="UOz-55-0zK"/>
+            </connections>
+            <point key="canvasLocation" x="252.17391304347828" y="83.705357142857139"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mineCellArrow" width="6.5" height="10"/>
+    </resources>
+</document>
