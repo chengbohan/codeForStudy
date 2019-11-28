@@ -13,13 +13,17 @@
 #import "DLNoticeDetailVC.h"
 #import "DLSelectItemVC.h"
 #import "DLAdvertiseView.h"
+#import "DLNoticeView.h"
+#import "HomeNoticeReq.h"
+#import "HomeNoticeModel.h"
 @interface DLHomeVC ()
 @property(nonatomic, weak)IBOutlet UIButton *item1Btn;
 @property(nonatomic, weak)IBOutlet UIButton *item2Btn;
 @property(nonatomic, weak)IBOutlet UIButton *item3Btn;
 @property(nonatomic, weak)IBOutlet UIView *noticeView;
 @property(nonatomic, weak)IBOutlet DLAdvertiseView *advertView;
-@property(nonatomic, weak)IBOutlet DLAdvertiseView *nextAdvertView;
+@property(nonatomic, weak)IBOutlet DLNoticeView *nextAdvertView;
+@property(nonatomic, strong)HomeNoticeModel *noticeModel;
 @end
 
 @implementation DLHomeVC
@@ -38,7 +42,25 @@
 
 - (void)setUI {
     WeakSelf(self);
-    
+    HomeNoticeReq *req = [HomeNoticeReq new];
+    [req startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSDictionary *requestDict = [NSJSONSerialization JSONObjectWithData:request.responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSSLog(@"%@",requestDict);
+        weakself.noticeModel = [HomeNoticeModel modelWithDictionary:requestDict];
+        if (weakself.noticeModel.status == 0) {
+            NSMutableArray *arr = [NSMutableArray new];
+            for (int i = 0; i < self.noticeModel.data.count; i++) {
+                [arr addObject:self.noticeModel.data[i].title];
+            }
+            self.nextAdvertView.advertArr = arr;
+            [self.nextAdvertView startTime];
+
+        } else {
+            [SVProgressHUD showErrorWithStatus:weakself.noticeModel.msg];
+        }
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        [SVProgressHUD showErrorWithStatus:request.error.description];
+    }];
     NSArray *arr = [NSArray arrayWithObjects:
     @"http://img01.tooopen.com/Downs/images/2009/11/3/sy_20091103101617081018.jpg",
     @"http://pic26.nipic.com/20121230/9034633_172138299000_2.jpg",
@@ -53,8 +75,7 @@
         [self.navigationController pushViewController:vc animated:YES];
     }];
     
-    _nextAdvertView.advertArr = arr;
-    [_advertView startTime];
+    
     
     self.view.backgroundColor = DLRGB(237, 237, 237);
     [_item1Btn clickBtnBlock:^(UIButton * _Nonnull btn) {

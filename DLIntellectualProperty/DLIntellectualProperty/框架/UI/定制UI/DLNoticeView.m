@@ -1,22 +1,27 @@
 //
-//  DLAdvertiseView.m
+//  DLNoticeView.m
 //  DLIntellectualProperty
 //
-//  Created by 博瀚程 on 2019/11/20.
+//  Created by mac on 2019/11/27.
 //  Copyright © 2019 博瀚程. All rights reserved.
 //
 
-#import "DLAdvertiseView.h"
-#import "DLCollectionViewCell.h"
-
-@interface DLAdvertiseView ()<UICollectionViewDelegate, UICollectionViewDataSource>
+#import "DLNoticeView.h"
+#import "DLCollectionAdvertCell.h"
+@interface DLNoticeView ()<UICollectionViewDelegate, UICollectionViewDataSource>
 @property(nonatomic, strong)UICollectionView *adverCollectView;
 @property(nonatomic, strong)UICollectionViewFlowLayout *layout;
-@property(nonatomic, assign)BOOL isHorizontalMove;
 @property(nonatomic, strong)NSTimer *timer;
 @end
-@implementation DLAdvertiseView
+@implementation DLNoticeView
 
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self setUI];
@@ -25,12 +30,12 @@
 - (void)setUI {
     self.backgroundColor = [UIColor clearColor];
     
-    self.layout = [UICollectionViewFlowLayout new];
-    self.layout.estimatedItemSize = CGSizeMake(100, self.frame.size.height);
-    //self.layout.minimumLineSpacing = 0;
+    self.layout = [UICollectionViewFlowLayout new];//414 358 56
+    self.layout.itemSize = CGSizeMake([UIScreen mainScreen].bounds.size.width - 56, 44);
+    self.layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    self.layout.minimumLineSpacing = 0;
     //self.layout.minimumInteritemSpacing = 5;
     _adverCollectView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.layout];
-    [self setCollectionViewLayoutScrollDirction:UICollectionViewScrollDirectionHorizontal];
     _adverCollectView.delegate = self;
     _adverCollectView.dataSource = self;
     _adverCollectView.backgroundColor = [UIColor clearColor];
@@ -38,13 +43,8 @@
     [_adverCollectView makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self);
     }];
-    [_adverCollectView registerNib:[UINib nibWithNibName:@"DLCollectionViewCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
+    [_adverCollectView registerNib:[UINib nibWithNibName:@"DLCollectionAdvertCell" bundle:nil] forCellWithReuseIdentifier:@"cell"];
     
-}
-
-- (void)setCollectionViewLayoutScrollDirction:(UICollectionViewScrollDirection)dirction {
-    self.isHorizontalMove = dirction == UICollectionViewScrollDirectionHorizontal ? YES : NO;
-    ((UICollectionViewFlowLayout *)self.adverCollectView.collectionViewLayout).scrollDirection = dirction;
 }
 
 
@@ -54,7 +54,7 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
   
-    DLCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    DLCollectionAdvertCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.lab.text = self.advertArr[indexPath.row % self.advertArr.count];
     return cell;
     
@@ -76,20 +76,15 @@
     if (!_timer) {
         // 设置时钟动画 定时器
         NSTimeInterval interval = 0.1f;
-        if (!_isHorizontalMove) {
-            interval = 2.0f;
-        }
         _timer = [NSTimer scheduledTimerWithTimeInterval:interval target:self selector:@selector(update:) userInfo:nil repeats:YES];
     }
     return _timer;
 }
 
 - (void)update:(NSTimer *)timer{
-    if (_isHorizontalMove) {
-        _adverCollectView.contentOffset = CGPointMake(_adverCollectView.contentOffset.x + 1, _adverCollectView.contentOffset.y);
-    } else {
-        _adverCollectView.contentOffset = CGPointMake(_adverCollectView.contentOffset.y, _adverCollectView.contentOffset.y + self.frame.size.height);
-    }
+ 
+    _adverCollectView.contentOffset = CGPointMake(_adverCollectView.contentOffset.x, _adverCollectView.contentOffset.y + 2);
+    
     
 }
 
@@ -106,13 +101,5 @@
 
 
     
-
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 @end

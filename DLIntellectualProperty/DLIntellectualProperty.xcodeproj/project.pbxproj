@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0481FFB1238E07E4005BF860 /* BaseReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481FFB0238E07E4005BF860 /* BaseReq.m */; };
+		0481FFB4238E0980005BF860 /* VerifyCodeReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481FFB3238E0980005BF860 /* VerifyCodeReq.m */; };
+		0481FFB7238E1955005BF860 /* BaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481FFB6238E1955005BF860 /* BaseModel.m */; };
+		0481FFBA238E19FD005BF860 /* LoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481FFB9238E19FD005BF860 /* LoginModel.m */; };
+		0481FFBD238E219A005BF860 /* RegistReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481FFBC238E219A005BF860 /* RegistReq.m */; };
+		0481FFC0238E3E7B005BF860 /* SignInModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481FFBF238E3E7B005BF860 /* SignInModel.m */; };
+		0481FFC4238E5529005BF860 /* DLCollectionAdvertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481FFC2238E5529005BF860 /* DLCollectionAdvertCell.m */; };
+		0481FFC5238E5529005BF860 /* DLCollectionAdvertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0481FFC3238E5529005BF860 /* DLCollectionAdvertCell.xib */; };
+		0481FFC8238E655D005BF860 /* DLNoticeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481FFC7238E655D005BF860 /* DLNoticeView.m */; };
+		0481FFCB238E6E96005BF860 /* HomeNoticeReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481FFCA238E6E96005BF860 /* HomeNoticeReq.m */; };
+		0481FFCE238E750F005BF860 /* MineReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481FFCD238E750F005BF860 /* MineReq.m */; };
+		0481FFD1238E7BD5005BF860 /* HomeNoticeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481FFD0238E7BD5005BF860 /* HomeNoticeModel.m */; };
+		04B686D1238D0E9A00C0DAA2 /* LoginReq.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B686D0238D0E9A00C0DAA2 /* LoginReq.m */; };
 		24033EE2235D4BFC00F3A3B5 /* DLBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 24033EE1235D4BFC00F3A3B5 /* DLBaseVC.m */; };
 		2403694D2373AF940059D018 /* GrayLineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2403694B2373AF940059D018 /* GrayLineTableViewCell.m */; };
 		2403694E2373AF940059D018 /* GrayLineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2403694C2373AF940059D018 /* GrayLineTableViewCell.xib */; };
@@ -154,6 +167,31 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0481FFAF238E07E4005BF860 /* BaseReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseReq.h; sourceTree = "<group>"; };
+		0481FFB0238E07E4005BF860 /* BaseReq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseReq.m; sourceTree = "<group>"; };
+		0481FFB2238E0980005BF860 /* VerifyCodeReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VerifyCodeReq.h; sourceTree = "<group>"; };
+		0481FFB3238E0980005BF860 /* VerifyCodeReq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VerifyCodeReq.m; sourceTree = "<group>"; };
+		0481FFB5238E1955005BF860 /* BaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseModel.h; sourceTree = "<group>"; };
+		0481FFB6238E1955005BF860 /* BaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseModel.m; sourceTree = "<group>"; };
+		0481FFB8238E19FC005BF860 /* LoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginModel.h; sourceTree = "<group>"; };
+		0481FFB9238E19FD005BF860 /* LoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginModel.m; sourceTree = "<group>"; };
+		0481FFBB238E219A005BF860 /* RegistReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistReq.h; sourceTree = "<group>"; };
+		0481FFBC238E219A005BF860 /* RegistReq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistReq.m; sourceTree = "<group>"; };
+		0481FFBE238E3E7B005BF860 /* SignInModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignInModel.h; sourceTree = "<group>"; };
+		0481FFBF238E3E7B005BF860 /* SignInModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignInModel.m; sourceTree = "<group>"; };
+		0481FFC1238E5529005BF860 /* DLCollectionAdvertCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLCollectionAdvertCell.h; sourceTree = "<group>"; };
+		0481FFC2238E5529005BF860 /* DLCollectionAdvertCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLCollectionAdvertCell.m; sourceTree = "<group>"; };
+		0481FFC3238E5529005BF860 /* DLCollectionAdvertCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DLCollectionAdvertCell.xib; sourceTree = "<group>"; };
+		0481FFC6238E655D005BF860 /* DLNoticeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLNoticeView.h; sourceTree = "<group>"; };
+		0481FFC7238E655D005BF860 /* DLNoticeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLNoticeView.m; sourceTree = "<group>"; };
+		0481FFC9238E6E96005BF860 /* HomeNoticeReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeNoticeReq.h; sourceTree = "<group>"; };
+		0481FFCA238E6E96005BF860 /* HomeNoticeReq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeNoticeReq.m; sourceTree = "<group>"; };
+		0481FFCC238E750F005BF860 /* MineReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MineReq.h; sourceTree = "<group>"; };
+		0481FFCD238E750F005BF860 /* MineReq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MineReq.m; sourceTree = "<group>"; };
+		0481FFCF238E7BD5005BF860 /* HomeNoticeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeNoticeModel.h; sourceTree = "<group>"; };
+		0481FFD0238E7BD5005BF860 /* HomeNoticeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeNoticeModel.m; sourceTree = "<group>"; };
+		04B686CF238D0E9A00C0DAA2 /* LoginReq.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginReq.h; sourceTree = "<group>"; };
+		04B686D0238D0E9A00C0DAA2 /* LoginReq.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginReq.m; sourceTree = "<group>"; };
 		12C4098A1208CC6E82DCD76E /* libPods-DLIntellectualProperty.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DLIntellectualProperty.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24033EE0235D4BFC00F3A3B5 /* DLBaseVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DLBaseVC.h; sourceTree = "<group>"; };
 		24033EE1235D4BFC00F3A3B5 /* DLBaseVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DLBaseVC.m; sourceTree = "<group>"; };
@@ -386,6 +424,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04B686CE238D0BB600C0DAA2 /* 请求 */ = {
+			isa = PBXGroup;
+			children = (
+				0481FFAF238E07E4005BF860 /* BaseReq.h */,
+				0481FFB0238E07E4005BF860 /* BaseReq.m */,
+				04B686CF238D0E9A00C0DAA2 /* LoginReq.h */,
+				04B686D0238D0E9A00C0DAA2 /* LoginReq.m */,
+				0481FFB8238E19FC005BF860 /* LoginModel.h */,
+				0481FFB9238E19FD005BF860 /* LoginModel.m */,
+				0481FFB2238E0980005BF860 /* VerifyCodeReq.h */,
+				0481FFB3238E0980005BF860 /* VerifyCodeReq.m */,
+				0481FFBB238E219A005BF860 /* RegistReq.h */,
+				0481FFBC238E219A005BF860 /* RegistReq.m */,
+				0481FFBE238E3E7B005BF860 /* SignInModel.h */,
+				0481FFBF238E3E7B005BF860 /* SignInModel.m */,
+				0481FFC9238E6E96005BF860 /* HomeNoticeReq.h */,
+				0481FFCA238E6E96005BF860 /* HomeNoticeReq.m */,
+				0481FFCC238E750F005BF860 /* MineReq.h */,
+				0481FFCD238E750F005BF860 /* MineReq.m */,
+				0481FFCF238E7BD5005BF860 /* HomeNoticeModel.h */,
+				0481FFD0238E7BD5005BF860 /* HomeNoticeModel.m */,
+			);
+			path = "请求";
+			sourceTree = "<group>";
+		};
 		050C4589DCF87A126CE41FF1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +558,11 @@
 				2407A32E2384DE0800DDE461 /* DLCollectionViewCell.h */,
 				2407A32C2384DE0800DDE461 /* DLCollectionViewCell.m */,
 				2407A32D2384DE0800DDE461 /* DLCollectionViewCell.xib */,
+				0481FFC1238E5529005BF860 /* DLCollectionAdvertCell.h */,
+				0481FFC2238E5529005BF860 /* DLCollectionAdvertCell.m */,
+				0481FFC3238E5529005BF860 /* DLCollectionAdvertCell.xib */,
+				0481FFC6238E655D005BF860 /* DLNoticeView.h */,
+				0481FFC7238E655D005BF860 /* DLNoticeView.m */,
 			);
 			path = "定制UI";
 			sourceTree = "<group>";
@@ -716,6 +784,8 @@
 				2449F7E8237D43C80045EEF4 /* TradeTitleModel.m */,
 				2449F7E4237D43520045EEF4 /* TradeSubModel.h */,
 				2449F7E5237D43520045EEF4 /* TradeSubModel.m */,
+				0481FFB5238E1955005BF860 /* BaseModel.h */,
+				0481FFB6238E1955005BF860 /* BaseModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -732,6 +802,7 @@
 		24E7A2ED2358479700B5A7B9 /* BaseVC */ = {
 			isa = PBXGroup;
 			children = (
+				04B686CE238D0BB600C0DAA2 /* 请求 */,
 				241360AE2375127300E2C8AC /* 消息 */,
 				240369572373C6BC0059D018 /* 首页 */,
 				2413A803237120FE004E88ED /* 我的 */,
@@ -809,6 +880,7 @@
 				2407189F237E8A870051AE81 /* 图层 14@3x.png in Resources */,
 				24071875237E89290051AE81 /* TalkCollectionViewCell.xib in Resources */,
 				2449F7DF237D3B3D0045EEF4 /* TradeSubViewCell.xib in Resources */,
+				0481FFC5238E5529005BF860 /* DLCollectionAdvertCell.xib in Resources */,
 				24071893237E8A870051AE81 /* 图层 4@3x.png in Resources */,
 				2407189E237E8A870051AE81 /* 图层 3@2x.png in Resources */,
 				24B8EC97237D27D7006EAA31 /* ItemCollectionViewCell.xib in Resources */,
@@ -938,7 +1010,10 @@
 				2406F8452362C35600957B9C /* UIButton+Category.m in Sources */,
 				24B8EC8C237D2201006EAA31 /* TitleTableViewCell.m in Sources */,
 				2404C78B237BB45B009C7196 /* QuestionHeadTableViewCell.m in Sources */,
+				0481FFB1238E07E4005BF860 /* BaseReq.m in Sources */,
 				24E7A2F02358485100B5A7B9 /* DLTabBarVC.m in Sources */,
+				0481FFB4238E0980005BF860 /* VerifyCodeReq.m in Sources */,
+				0481FFB7238E1955005BF860 /* BaseModel.m in Sources */,
 				241360942374F5CC00E2C8AC /* UIImageView+Category.m in Sources */,
 				2406F84B2362E5F900957B9C /* NSString+Category.m in Sources */,
 				241360B32375129000E2C8AC /* DLMessageVC.m in Sources */,
@@ -946,6 +1021,7 @@
 				240C72CF2356AE0400F48A2E /* ViewController.m in Sources */,
 				241360982374F82A00E2C8AC /* EditMineInfoVC.m in Sources */,
 				2403694D2373AF940059D018 /* GrayLineTableViewCell.m in Sources */,
+				0481FFCE238E750F005BF860 /* MineReq.m in Sources */,
 				240C72DA2356AE0600F48A2E /* main.m in Sources */,
 				24B8EC82237D1B33006EAA31 /* QuestionResultVC.m in Sources */,
 				2449F7E6237D43520045EEF4 /* TradeSubModel.m in Sources */,
@@ -953,6 +1029,7 @@
 				24778AF323796B25008B1E99 /* PolicyTableViewCell.m in Sources */,
 				2413609D2375015800E2C8AC /* AvatarTableViewCell.m in Sources */,
 				241360A2237510C800E2C8AC /* DLPolicyQuestionVC.m in Sources */,
+				0481FFD1238E7BD5005BF860 /* HomeNoticeModel.m in Sources */,
 				2449F7DE237D3B3D0045EEF4 /* TradeSubViewCell.m in Sources */,
 				241360A72375111700E2C8AC /* DLAboutUsVC.m in Sources */,
 				24B8EC91237D268D006EAA31 /* DLSelectItemVC.m in Sources */,
@@ -964,17 +1041,21 @@
 				24778ADF237958E4008B1E99 /* DLNoticeVC.m in Sources */,
 				2407185E237E51D00051AE81 /* DLPolicyDetailVC.m in Sources */,
 				2404C79D237BEB07009C7196 /* QuestionSelectCell.m in Sources */,
+				0481FFBD238E219A005BF860 /* RegistReq.m in Sources */,
 				24B8EC87237D1E65006EAA31 /* ResultDetailTableViewCell.m in Sources */,
+				0481FFC0238E3E7B005BF860 /* SignInModel.m in Sources */,
 				2449F7D9237D39E50045EEF4 /* TradeTitleCell.m in Sources */,
 				24040E8A237A902D00A981E3 /* UIImage+Tool.m in Sources */,
 				24040E99237AC99600A981E3 /* DLMyVisitCell.m in Sources */,
 				24B8EC96237D27D7006EAA31 /* ItemCollectionViewCell.m in Sources */,
 				240369552373AFFE0059D018 /* MineTableViewCell.m in Sources */,
 				24040E8F237A92C000A981E3 /* DLSearchListVC.m in Sources */,
+				0481FFCB238E6E96005BF860 /* HomeNoticeReq.m in Sources */,
 				2404C794237BDAEC009C7196 /* LineView.m in Sources */,
 				2403695A2373C6D40059D018 /* DLHomeVC.m in Sources */,
 				240718AA237E978F0051AE81 /* TextFeildInputVC.m in Sources */,
 				241381F42383BB2F001055D6 /* DLTableViewCell.m in Sources */,
+				04B686D1238D0E9A00C0DAA2 /* LoginReq.m in Sources */,
 				241360C02375532D00E2C8AC /* MessageTableViewCell.m in Sources */,
 				240369652374168D0059D018 /* FieldTableViewCell.m in Sources */,
 				2407A32F2384DE0800DDE461 /* DLCollectionViewCell.m in Sources */,
@@ -994,13 +1075,16 @@
 				2404C781237BA4B3009C7196 /* MyCustomerVC.m in Sources */,
 				24FA458723668D420098644E /* text.swift in Sources */,
 				24071862237E6DAF0051AE81 /* BackBtn.m in Sources */,
+				0481FFC8238E655D005BF860 /* DLNoticeView.m in Sources */,
 				24040E8B237A902D00A981E3 /* SSSearchBar.m in Sources */,
 				24071868237E738C0051AE81 /* TalkVC.m in Sources */,
 				2406F8482362DF3600957B9C /* DLCommonUtil.m in Sources */,
 				24778AEE23795ED7008B1E99 /* DLPolicyLookVC.m in Sources */,
+				0481FFC4238E5529005BF860 /* DLCollectionAdvertCell.m in Sources */,
 				241360BC237533ED00E2C8AC /* UIView+Category.m in Sources */,
 				24040E94237A986900A981E3 /* DLMyVisitVC.m in Sources */,
 				240C72CC2356AE0400F48A2E /* AppDelegate.m in Sources */,
+				0481FFBA238E19FD005BF860 /* LoginModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1058,7 +1142,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1111,7 +1195,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1132,6 +1216,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DLIntellectualProperty/PrefixHeader.pch";
 				INFOPLIST_FILE = DLIntellectualProperty/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1142,7 +1227,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "DLIntellectualProperty/BaseVC/DLIntellectualProperty-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1159,6 +1244,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/DLIntellectualProperty/PrefixHeader.pch";
 				INFOPLIST_FILE = DLIntellectualProperty/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1168,7 +1254,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "知政达";
 				SWIFT_OBJC_BRIDGING_HEADER = "DLIntellectualProperty/BaseVC/DLIntellectualProperty-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

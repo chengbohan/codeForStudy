@@ -7,13 +7,20 @@
 //
 
 #import "DLLoginVC.h"
-
+#import "LoginReq.h"
+#import "VerifyCodeReq.h"
+#import "LoginModel.h"
+#import "RegistReq.h"
+#import "SignInModel.h"
 @interface DLLoginVC ()<UITextFieldDelegate>
 @property (nonatomic, weak)IBOutlet UIButton *verifyCodeBtn;
 @property (nonatomic, weak)IBOutlet DLBottomLineField *accountTextFeild;
 @property (nonatomic, weak)IBOutlet DLBottomLineField *passwordTextFeild;
 @property (nonatomic, weak)IBOutlet UIButton *loginBtn;
 @property (nonatomic, strong)TTTAttributedLabel *agreeLab;
+@property (nonatomic, strong)LoginModel *verityModel;
+@property (nonatomic, strong)LoginModel *registModel;
+@property (nonatomic, strong)SignInModel *signInModel;
 @end
 
 @implementation DLLoginVC
@@ -45,7 +52,22 @@
     _verifyCodeBtn.layer.cornerRadius = 15;
     [_verifyCodeBtn setTitleColor:DLRGB(255, 125, 95) forState:UIControlStateNormal];
     [_verifyCodeBtn clickBtnBlock:^(UIButton * _Nonnull btn) {
-        [btn showCountDown:60 CountDwonText:@"重新获取%@s" AgainText:@"获取验证码"];
+        if (DLStringIsEmpty(self.accountTextFeild.text)) {
+            NSSLog(@"手机号不能为空");
+            [SVProgressHUD showErrorWithStatus:@"手机号不能为空"];
+            return;
+        }
+        if (self.accountTextFeild.text.length != 11) {
+            NSSLog(@"手机号位数不正确");
+            [SVProgressHUD showErrorWithStatus:@"手机号位数不正确"];
+            return;
+        }
+        if (![self.accountTextFeild.text isValidateMobile]) {
+            NSSLog(@"手机格式不符");
+            [SVProgressHUD showErrorWithStatus:@"手机格式不符"];
+            return;
+        }
+        [btn showCountDown:10 CountDwonText:@"重新获取%@s" AgainText:@"获取验证码"];
         //发送验证码
         [weakself requestForVerifyCode];
     }];
@@ -55,27 +77,33 @@
     [_loginBtn clickBtnBlock:^(UIButton * _Nonnull btn) {
         NSSLog(@"点击按钮");
         if (DLStringIsEmpty(weakself.accountTextFeild.text)) {
+            [SVProgressHUD showErrorWithStatus:@"手机号不能为空"];
             NSSLog(@"手机号不能为空");
+            
             return;
         }
         if (weakself.accountTextFeild.text.length != 11) {
+            [SVProgressHUD showErrorWithStatus:@"手机号位数不正确"];
             NSSLog(@"手机号位数不正确");
             return;
         }
         if (![weakself.accountTextFeild.text isValidateMobile]) {
             NSSLog(@"手机格式不符");
+            [SVProgressHUD showErrorWithStatus:@"手机格式不符"];
             return;
         }
         if (DLStringIsEmpty(weakself.passwordTextFeild.text)) {
             NSSLog(@"验证码不能为空");
+            [SVProgressHUD showErrorWithStatus:@"验证码不能为空"];
             return;
         }
-        if (weakself.passwordTextFeild.text.length != 4) {
+        if (weakself.passwordTextFeild.text.length != 6) {
+              [SVProgressHUD showErrorWithStatus:@"验证码位数不正确"];
             NSSLog(@"验证码位数不正确");
             return;
         }
         
-        [weakself requestForLogin];
+        [weakself requestForRegist];
     }];
     
     _agreeLab = [TTTAttributedLabel new];
@@ -109,7 +137,7 @@
             return NO;
         }
     } else if(textField.tag == 2) {
-        if (inputStr.length > 4) {
+        if (inputStr.length > 6) {
             return NO;
         }
         if (![inputStr isValidateNumber]) {
@@ -120,15 +148,87 @@
 }
 
 -(void)requestForVerifyCode {
-    
+    WeakSelf(self);
+    [SVProgressHUD show];
+    VerifyCodeReq *req = [VerifyCodeReq new];
+    req.phone = self.accountTextFeild.text;
+    [req startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        
+        NSDictionary *requestDict = [NSJSONSerialization JSONObjectWithData:request.responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSSLog(@"%@",requestDict);
+        weakself.verityModel = [LoginModel modelWithDictionary:requestDict];
+        if (weakself.verityModel.status == 0) {
+            [[NSUserDefaults standardUserDefaults] setObject:weakself.verityModel.data.JSESSIONID forKey:@"JSESSIONID"];
+             [SVProgressHUD dismiss];
+        }else {
+            [SVProgressHUD showErrorWithStatus:weakself.verityModel.msg];
+        }
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        [SVProgressHUD showErrorWithStatus:request.error.description];
+    }];
 }
 
 - (void)requestForLogin {
-    DLTabBarVC *tabbar = [DLTabBarVC new];
-    [tabbar addChildVC:@"DLHomeVC" title:@"首页" normalImg:@"FirstN" selectImg:@"FirstS"];
-    [tabbar addChildVC:@"DLMessageVC" title:@"消息" normalImg:@"SecN" selectImg:@"SecS"];
-    [tabbar addChildVC:@"DLMineVC" title:@"我的" normalImg:@"ThirdN" selectImg:@"ThirdS"];
-    self.mainWindow.rootViewController = tabbar;
+    WeakSelf(self);
+    LoginReq *req = [LoginReq new];
+    req.code = self.passwordTextFeild.text;
+    req.mobile = self.accountTextFeild.text;
+    [SVProgressHUD show];
+    [req startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSDictionary *requestDict = [NSJSONSerialization JSONObjectWithData:request.responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSSLog(@"%@",requestDict);
+        weakself.signInModel = [SignInModel modelWithDictionary:requestDict];
+   
+        if (weakself.signInModel.status == 0) {
+            [[NSUserDefaults standardUserDefaults] setObject:weakself.signInModel.data.JSESSIONID forKey:@"JSESSIONID"];
+            [[NSUserDefaults standardUserDefaults] setObject:@(weakself.signInModel.data.id) forKey:@"id"];
+            [[NSUserDefaults standardUserDefaults] synchronize];
+            [SVProgressHUD dismiss];
+            DLTabBarVC *tabbar = [DLTabBarVC new];
+            [tabbar addChildVC:@"DLHomeVC" title:@"首页" normalImg:@"FirstN" selectImg:@"FirstS"];
+            [tabbar addChildVC:@"DLMessageVC" title:@"消息" normalImg:@"SecN" selectImg:@"SecS"];
+            [tabbar addChildVC:@"DLMineVC" title:@"我的" normalImg:@"ThirdN" selectImg:@"ThirdS"];
+            self.mainWindow.rootViewController = tabbar;
+        } else {
+            [SVProgressHUD showErrorWithStatus:weakself.signInModel.msg];
+        }
+        
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        [SVProgressHUD showErrorWithStatus:request.error.description];
+    }];
+    
+    
+}
+
+
+- (void)requestForRegist {
+     WeakSelf(self);
+    RegistReq *req = [RegistReq new];
+    req.code = self.passwordTextFeild.text;
+    req.mobile = self.accountTextFeild.text;
+    [SVProgressHUD show];
+    [req startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest * _Nonnull request) {
+        NSDictionary *requestDict = [NSJSONSerialization JSONObjectWithData:request.responseObject options:NSJSONReadingMutableContainers error:nil];
+        NSSLog(@"%@",requestDict);
+        weakself.registModel = [LoginModel modelWithDictionary:requestDict];
+
+        if (weakself.registModel.status == 0 || weakself.registModel.status == -2) {
+            //0 注册成功 直接登陆
+            if (weakself.registModel.status == 0) {
+                [[NSUserDefaults standardUserDefaults] setObject:weakself.registModel.data.JSESSIONID forKey:@"JSESSIONID"];
+                [[NSUserDefaults standardUserDefaults] setObject:@(weakself.registModel.data.id) forKey:@"id"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+            }
+            
+            [SVProgressHUD dismiss];
+            [weakself requestForLogin];
+        } else {
+            [SVProgressHUD showErrorWithStatus:weakself.registModel.msg];
+        }
+        
+    } failure:^(__kindof YTKBaseRequest * _Nonnull request) {
+        [SVProgressHUD showErrorWithStatus:request.error.description];
+    }];
 }
 /*
 #pragma mark - Navigation
